@@ -1,0 +1,17 @@
+.float-right {
+  float: right;
+}
+
+.nav-list {
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 16px 12px;
+    text-decoration: none;
+    min-width: 200px;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+}
