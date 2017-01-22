@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { MathService } from './shared/math.service';
+import { SettingsService } from './shared/settings.service';
 import { SettingsComponent } from './settings/settings.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { settingsReducer } from './store/settings.reducer';
 
 @NgModule({
   declarations: [
@@ -21,10 +24,12 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.provideStore({ settings: settingsReducer })
   ],
   providers: [
-    MathService
+    MathService,
+    SettingsService
   ],
   bootstrap: [AppComponent]
 })
