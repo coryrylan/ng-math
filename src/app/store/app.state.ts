@@ -1,3 +1,5 @@
+import { GameSettings } from './settings.reducer';
+
 export interface AppState {
-  settings: { };
+  settings: GameSettings;
 }

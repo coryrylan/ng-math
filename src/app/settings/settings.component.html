@@ -1,8 +1,29 @@
-<p>
-  settings works!
-</p>
+<h1>Settings</h1>
 
-<button (click)="setDifficulty()">Medium</button>
+<form [formGroup]="settingsForm">
+  <label for="game-type">Game Type</label>
+  <md-radio-group id="game-type" formControlName="gameType" >
+    <md-radio-button value="0">Standard</md-radio-button>
+    <md-radio-button value="1">Timed</md-radio-button>
+  </md-radio-group>
 
-Game Difficulty:
-{{(settings | async)?.difficulty}}
+  <br><br>
+
+  <label for="difficulty">Difficulty</label>
+  <md-radio-group id="difficulty" formControlName="difficulty" >
+    <md-radio-button value="0">Easy</md-radio-button>
+    <md-radio-button value="1">Medium</md-radio-button>
+    <md-radio-button value="2">Hard</md-radio-button>
+  </md-radio-group>
+
+  <br><br>
+
+  <label for="math-type">Math Type</label>
+  <md-radio-group id="math-type" formControlName="mathType" >
+    <md-radio-button value="0">All</md-radio-button>
+    <md-radio-button value="1">Addition</md-radio-button>
+    <md-radio-button value="2">Subtraction</md-radio-button>
+    <md-radio-button value="3">Multiplication</md-radio-button>
+    <md-radio-button value="4">Division</md-radio-button>
+  </md-radio-group>
+</form>

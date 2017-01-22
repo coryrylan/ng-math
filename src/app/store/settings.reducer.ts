@@ -1,5 +1,11 @@
 import { ActionReducer, Action } from '@ngrx/store';
 
+export interface GameSettings {
+  difficulty: GameDifficulty;
+  mathType: MathType;
+  gameType: GameType;
+}
+
 export enum GameDifficulty {
   easy,
   medium,
@@ -26,21 +32,31 @@ export const SET_GAME_TYPE = 'SET_GAME_TYPE';
 const defaultState = {
   difficulty: GameDifficulty.easy,
   gameType: GameType.standard,
-  mathType: MathType.addition
+  mathType: MathType.all
 };
 
-export function settingsReducer(state = defaultState, action: Action) {
+export function settingsReducer(state = defaultState, action: Action): GameSettings {
   switch (action.type) {
     case SET_DIFFICULTY:
-      const settings = Object.assign({ }, state);
-      settings.difficulty = action.payload;
-      return settings;
+      return Object.assign({}, {
+        difficulty: action.payload,
+        mathType: state.mathType,
+        gameType: state.gameType
+      });
 
     case SET_MATH_TYPE:
-      return state.mathType = action.payload;
+      return Object.assign({}, {
+        difficulty: state.difficulty,
+        mathType: action.payload,
+        gameType: state.gameType
+      });
 
     case SET_GAME_TYPE:
-      return state.gameType = action.payload;
+      return Object.assign({}, {
+        difficulty: state.difficulty,
+        mathType: state.mathType,
+        gameType: action.payload
+      });
 
     default:
       return state;
