@@ -23,7 +23,7 @@ export class SettingsComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private store: Store<AppState>) {
     this.settingsForm = this.formBuilder.group({
-      gameType: ['0'],
+      // gameType: ['0'],
       mathType: ['0'],
       difficulty: ['0']
     });
@@ -32,16 +32,16 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {
     this.settings = this.store.select('settings');
     this.settings.subscribe(settings => {
-      this.settingsForm.controls['gameType'].setValue(settings.gameType.toString());
+      // this.settingsForm.controls['gameType'].setValue(settings.gameType.toString());
       this.settingsForm.controls['mathType'].setValue(settings.mathType.toString());
       this.settingsForm.controls['difficulty'].setValue(settings.difficulty.toString());
     });
 
-    this.settingsForm.controls['gameType'].valueChanges.distinctUntilChanged()
-      .subscribe(value => this.store.dispatch({ type: SET_GAME_TYPE, payload: value }));
+    // this.settingsForm.controls['gameType'].valueChanges.distinctUntilChanged()
+    //  .subscribe(value => this.store.dispatch({ type: SET_GAME_TYPE, payload: +value }));
     this.settingsForm.controls['mathType'].valueChanges.distinctUntilChanged()
-      .subscribe(value => this.store.dispatch({ type: SET_MATH_TYPE, payload: value }));
+      .subscribe(value => this.store.dispatch({ type: SET_MATH_TYPE, payload: +value }));
     this.settingsForm.controls['difficulty'].valueChanges.distinctUntilChanged()
-      .subscribe(value => this.store.dispatch({ type: SET_DIFFICULTY, payload: value }));
+      .subscribe(value => this.store.dispatch({ type: SET_DIFFICULTY, payload: +value }));
   }
 }

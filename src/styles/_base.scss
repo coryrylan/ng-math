@@ -22,3 +22,28 @@ app-root, main, md-sidenav-container {
 main {
   padding: 12px;
 }
+
+.link-light {
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}

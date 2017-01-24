@@ -13,13 +13,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { settingsReducer } from './store/settings.reducer';
 import { GameComponent } from './game/game.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SettingsComponent,
     HomeComponent,
-    GameComponent
+    GameComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

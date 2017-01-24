@@ -2,19 +2,25 @@
   <md-sidenav #sidenav class="nav-list">
     <a routerLink="/" class="nav-list__item" (click)="sidenav.close()">Home</a>
     <a routerLink="/settings" class="nav-list__item" (click)="sidenav.close()">Settings</a>
+    <a routerLink="/about" class="nav-list__item" (click)="sidenav.close()">About</a>
   </md-sidenav>
 
   <header>
     <md-toolbar color="primary">
-      <span>NG-Math</span>
+      <a routerLink="/" class="link-light">NG-Math</a>
       <button md-button (click)="sidenav.open()" class="float-right menu-btn">
       <md-icon>menu</md-icon>
     </button>
     </md-toolbar>
   </header>
   <main>
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </main>
   <footer></footer>
-
 </md-sidenav-container>
+
+<span class="app-action">
+  <a routerLink="game" md-fab><md-icon>play_arrow</md-icon></a>
+</span>

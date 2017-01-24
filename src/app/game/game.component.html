@@ -1,12 +1,12 @@
 
-<md-card class="problem">
+<md-card class="problem" (click)="getNextProblem()">
   <div class="problem__first">{{mathProblem?.first}}</div>
   <div class="problem__operator">{{mathProblem?.operator}}</div>
   <div class="problem__second">{{mathProblem?.second}}</div>
   <div class="problem__line"></div>
-  <div *ngIf="showValue" class="problem__value">{{mathProblem?.value}}</div>
+  <div *ngIf="showValue" class="problem__value">{{mathProblem?.value | number}}</div>
   
-  <button *ngIf="!showValue" (click)="showValue = true" md-button class="problem__btn">Answer</button>
+  <!--<button *ngIf="!showValue" (click)="getNextProblem()" md-button class="problem__btn">Answer</button>
   <button *ngIf="showValue" (click)="getNextProblem()" md-button class="problem__btn">Next</button>
-  <br><br>
+  <br><br>-->
 </md-card>
