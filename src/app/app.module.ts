@@ -27,7 +27,7 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     AppRoutingModule,
     StoreModule.provideStore({ settings: settingsReducer })
   ],
