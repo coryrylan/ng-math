@@ -13,7 +13,9 @@
 .classpath
 .c9/
 *.launch
-.settings/
+.settings/\
+arbor-info.log
+arbor-live.log
 
 # IDE - VSCode
 .vscode/*
