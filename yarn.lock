@@ -4048,11 +4048,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-pretty-bytes@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-3.0.1.tgz#27d0008d778063a0b4811bb35c79f1bd5d5fbccf"
-  dependencies:
-    number-is-nan "^1.0.0"
+pretty-bytes@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
 
 pretty-error@^2.0.2:
   version "2.0.2"
@@ -4988,9 +4986,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-sw-precache@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/sw-precache/-/sw-precache-4.3.0.tgz#576c6c1c23b61c44ef5d84d33870641060d8c2de"
+sw-precache@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/sw-precache/-/sw-precache-5.0.0.tgz#0e3ef85bd8666dfc72f4dd0f89d3abcb3543a2cf"
   dependencies:
     dom-urls "^1.1.0"
     es6-promise "^4.0.5"
@@ -4999,8 +4997,9 @@ sw-precache@^4.3.0:
     lodash.template "^4.4.0"
     meow "^3.7.0"
     mkdirp "^0.5.1"
-    pretty-bytes "^3.0.1"
+    pretty-bytes "^4.0.2"
     sw-toolbox "^3.4.0"
+    update-notifier "^1.0.3"
 
 sw-toolbox@^3.4.0:
   version "3.6.0"
@@ -5271,7 +5270,7 @@ unzip-response@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-1.0.2.tgz#b984f0877fc0a89c2c773cc1ef7b5b232b5b06fe"
 
-update-notifier@^1.0.2:
+update-notifier@^1.0.2, update-notifier@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-1.0.3.tgz#8f92c515482bd6831b7c93013e70f87552c7cf5a"
   dependencies:
@@ -5612,16 +5611,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@1.1.1:
+ws@1.1.1, ws@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.1.tgz#082ddb6c641e85d4bb451f03d52f06eabdb1f018"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
-
-ws@^1.0.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
