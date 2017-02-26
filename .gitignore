@@ -13,7 +13,8 @@
 .classpath
 .c9/
 *.launch
-.settings/\
+.settings/
+*.sublime-workspace
 arbor-info.log
 arbor-live.log
 
