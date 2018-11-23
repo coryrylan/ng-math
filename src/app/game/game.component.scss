@@ -1,6 +1,14 @@
 .problem {
   position: relative;
   min-height: 200px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+  cursor: pointer;
+                                
 
   &__first, &__second, &__value {
     font-size: 3em;
